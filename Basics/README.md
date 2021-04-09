@@ -1,7 +1,7 @@
 
 ## Data types
 Javascript has dynamic typing. Data types are automatically assigned to variables.
-These two variable have different data type but we dont specified in first time.
+These two variable have different data type but we dont specified their data types.
 
 `
 var name = "Kayse"  
