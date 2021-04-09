@@ -1,9 +1,16 @@
 
 ## Data types
 Javascript has dynamic typing. Data types are automatically assigned to variables.
+These two variable have different data type but we dont specified in first time.
 
+`
+var name = "Kayse"  
+`  
+`
+var number = 15
+`
 
-Difference Primitive data types of JavaScripts are:
+**Difference Primitive data types of JavaScripts are:**
  * Number
  * String
  * Boolean
