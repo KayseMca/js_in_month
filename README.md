@@ -5,7 +5,7 @@ this's in one month learning basic of javascript then will continuou DS and Algo
 ## Week 1
 learning some basic concepts of javascript
 ### basics  
-[Basic Conc with Code](Basics/README.md)  :blush:
+[Basic concepts with Code](Basics/README.md)  :blush:
 
 
 
