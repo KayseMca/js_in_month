@@ -3,6 +3,8 @@ this's in one month learning basic of javascript then will continuou DS and Algo
 
 
 ## Week 1
+learning some basics concept of javascript
 ### basics
-[Basic :blush: ](Basics/README.md)  
+[Basic :blush: ](Basics/README.md :blush:)  
+
 https://blog.bitsrc.io/10-super-useful-tricks-for-javascript-developers-f1b76691199b
