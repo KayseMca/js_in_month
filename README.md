@@ -3,8 +3,10 @@ this's in one month learning basic of javascript then will continuou DS and Algo
 
 
 ## Week 1
-learning some basics concept of javascript
-### basics
-[Basic part :blush: ](Basics/README.md :blush:)    
-[Advanced part :blush: ](Advanced/README.md :blush:) 
-[DS and Algorithms part :blush: ](DS_Algorithms/README.md :blush:) 
+learning some basic concepts of javascript
+### basics  
+[Basic part](Basics/README.md :blush:) 
+
+
+
+

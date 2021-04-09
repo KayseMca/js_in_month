@@ -36,7 +36,9 @@ another comment line
 */
 `
 
-**Operators**
-
+**Operators**  
+`var year = 2021`    
+`console.log(year-26)` // output   
+`typeof year` // _output_ Number
 
  ## Tricks and Tips
