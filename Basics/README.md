@@ -1,5 +1,6 @@
 
 ## Data types
+[Codes Here](my_training_code.js) 💛    
 Javascript has dynamic typing. Data types are automatically assigned to variables.
 These two variable have different data type but we dont specified their data types.
 
@@ -41,4 +42,24 @@ another comment line
 `console.log(year-26)` // output   
 `typeof year` // _output_ Number
 
+
+**Functions**
+ if we have lot of codes that we should run couple of times we create function with parameters if necessary then called the function when even is needed.
+
+ `
+ function helloFunction(name){  
+    console.log("hello"+name)  
+ }  
+ `
+
+
+**Array**  
+it's like collection of Variables
+`var names = ['Kayse', 'Jane']`
+
+**Objects**  
+like array instead of accessing the elemant by index, you can access by specific name. And also wont have order as Array.  
+`var obj = {  
+   'name':'kayse'
+}`
  ## Tricks and Tips
