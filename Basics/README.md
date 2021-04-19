@@ -62,4 +62,19 @@ like array instead of accessing the elemant by index, you can access by specific
 `var obj = {  
    'name':'kayse'
 }`
+
+**Loops Andoooooooooooooon**  
+Loops offer a quick and easy way to do something repeatedly(MDN). instead of writing couple of times same code, looping through is better.
+  
+`
+for(var i=0; i<10;i++){  
+   console.log(i)
+}`
+
  ## Tricks and Tips
+
+`var a = 10  
+ var b = "10"  
+ if(a==b)
+`  
+this comparison my not always good or efficiency  this will only good if you know the return of comparisons, so using __===__ maybe better.
