@@ -1,5 +1,5 @@
 # js_in_month
-this's in one month learning basic of javascript then will continuou DS and Algorithms
+this's in my learning path of one month learning basic of javascript then will continuou DS and Algorithms
 
 
 ## Week 1
