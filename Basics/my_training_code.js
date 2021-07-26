@@ -106,3 +106,5 @@ var billTips = function(bill){
 console.log(billTips(25))
 
 
+// ? How Javascript works
+// * check the README.md 

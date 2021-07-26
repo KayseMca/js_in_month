@@ -43,33 +43,41 @@ another comment line
 `typeof year` // _output_ Number
 
 
-**Functions**
+**Functions**  
  if we have lot of codes that we should run couple of times we create function with parameters if necessary then called the function when ever is needed.
 
- `
+ ```
  function helloFunction(name){  
     console.log("hello"+name)  
  }  
- `
+ ```
 
 
 **Array**  
 it's like collection of Variables
-`var names = ['Kayse', 'Jane']`
+```
+var names = ['Kayse', 'Jane']
+// accessing the elemant by index
+console.log(names[0]) // Kayse
+```  
 
 **Objects**  
 like array instead of accessing the elemant by index, you can access by specific name. And also wont have order as Array.  
-`var obj = {  
+```
+var obj = {   
    'name':'kayse'
-}`
+}   
+console.log(obj['name']) // Kayse
+```
 
 **Loops**  
 Loops offer a quick and easy way to do something repeatedly(MDN). instead of writing couple of times same code, looping through is better.
   
-`
+```
 for(var i=0; i<10;i++){  
    console.log(i)
-}`
+}
+```
 
 ## Javascript Versions
 In 1996 changed from LiveScript to JavaScript. In 1997 ESI(ECMAScript 1) became the first JavaScript version, and then The following versions were released, respectively:
@@ -83,12 +91,52 @@ more notes=> this link
 
  **Sources**  
    English
- * https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf  
+ * [Article](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)  
+
 Turkish
- * https://oguzkilic.medium.com/taray%C4%B1c%C4%B1lar-javascripti-nas%C4%B1l-yorumlar-fbdfc472f8e3  
- * https://devnot.com/2020/javascript-nasil-calisir/
+ * [Article 1](https://oguzkilic.medium.com/taray%C4%B1c%C4%B1lar-javascripti-nas%C4%B1l-yorumlar-fbdfc472f8e3)  
+ * [Article 2](https://devnot.com/2020/javascript-nasil-calisir/)
 
+first, all the code in javascript is parsed a parser that reads js codes line by line, then the parser produces *Abstract Syntax Tree* => it translates js code into machine code.  
+**Execution Context** => this is where all Javascript code runs. As defualt the Global Execution Context is the code that not inside any function.  
+In the code that exist inside of any function when ever called the function this will be new context Execution Contexts and being the active code that running, and this contineous every new called function on top of stack (see the image). 
 
+**Execution Context**  
+the Execution Context is like object and it has three properties:
+   * Variable Object
+   * Scope Chain
+   * "This" variable
+
+more resources => [Youtube link](https://www.youtube.com/watch?v=OympYhd4P9w&list=PL1BztTYDF-QNS9VdeIX62d1X5rxkLsejH&ab_channel=procademy)
+
+   Calling a new function, as already mentioned, the new Execution Context(function) is put on top of Execution Stack. This happens two phases:
+   * **Creation Phase**: *The definition part*   
+   *this calles the function before the execution Phase and scans the function scope then compiles(simply prepares the function to get result)* 
+      *  **Variable Object**  
+      *Here is where goes all the variables, functions  and inner functions declaration information. All the variables are set undefined and in the execution phase it set its real values. And this is also where comes **Hoisting** => that means before declaration the functions and variables are available to use in Javascript*
+
+      **example Hoisting code**
+      ```
+      greating();
+      function greating(){
+         console.log("Hello there")
+      }
+      ```
+      **Note**: but the function Expression it will give an error as long as we storing the function in variable.   
+
+      ```
+      greating(); // this will cause an error because it counts "greating" as variable not as function, 
+                  but calling without pranteses it return undefined because we mentioned in the Creation phrase all the variable it declares undefined as value.
+
+      var greating = function(){
+         console.log("Hello there")
+      }
+      ```  
+
+      * **Creation of Scope Chain**
+      * **determine value of "this " variable**
+   * **Execution Phase**:
+      * this is where runned the function code line by line
  ## Tricks and Tips
 
 `var a = 10  
