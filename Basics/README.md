@@ -137,15 +137,77 @@ more resources => [Youtube link](https://www.youtube.com/watch?v=OympYhd4P9w&lis
       * **Creation of Scope Chain**   
       *Every new function creates a scope:the enviroment in which the variables it defines are accessible*.   
          ***Lexical scoping*** is a function that is Lexically within another function, and have access of the scope of the outer function.
-      * **determine value of "this " variable**
+
+         ```
+         // summarizing of what we learned already
+
+         var x = "Javascript";
+         first(); // this is Hoisting, we calling function before we declare
+
+         function first() {
+            var y = "Concepts";
+            second();
+
+            function second() { // this is Lexical scope, it is inside of another function
+               var z = "Learning";
+               console.log(x+y+z); // this Lexically scope can access the outer(first) function and the global one(x)
+            }
+         }
+         ```
+      * **This Keyword**   
+      "This" Keyword is basically a special variable that is created  for every execution context.
+      The regular function call the "this" Keyword points at the global object( in strict mode it is *undefined*). The value of "this" Keyword is only assigned when the function is actually called(in runtime)
+      ```
+      function greating() {
+         console.log(this) // will call the global object(windows)
+      }
+      // but ...
+
+      var person = {
+         name:"John",
+         age : 26
+         greating: function() {
+            console.log(this) // this will call the person object
+         }
+
+         // easily, all the methods, the "this" Keyword points to the object that is calling the method(belong the method)
+      }
+      ```  
+      but in the Arrow function it uses the "this" Keyword of its parent scope.  
+      ```
+      var person = {
+         name:"John",
+         age : 26
+         greating: function() {
+            console.log(this) // this will call the person object
+
+            function inner() {
+               console.log(this) // will point the global object(window). But in Arrow function it is different
+
+            }
+            inner();
+
+            let func = () {
+               console.log(this) // this will point the person object
+            }
+
+            func()
+
+            
+         }
+
+      }
+      ```
    * **Execution Phase**:
       * this is where runned the function code line by line
  ## Tricks and Tips
 
-`var a = 10  
+```
+var a = 10  
  var b = "10"  
  if(a==b)
-`  
+
+```  
 this comparison my not always good or efficiency  this will only good if you know the return of comparisons, so using __===__ maybe better.
 
 
