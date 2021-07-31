@@ -97,8 +97,9 @@ Turkish
  * [Article 1](https://oguzkilic.medium.com/taray%C4%B1c%C4%B1lar-javascripti-nas%C4%B1l-yorumlar-fbdfc472f8e3)  
  * [Article 2](https://devnot.com/2020/javascript-nasil-calisir/)
 
-first, all the code in javascript is parsed a parser that reads js codes line by line, then the parser produces *Abstract Syntax Tree* => it translates js code into machine code.  
-**Execution Context** => this is where all Javascript code runs. As defualt the Global Execution Context is the code that not inside any function.  
+first, all the code in javascript is parsed a parser that reads js codes line by line, then the parser produces *Abstract Syntax Tree*: it translates js code into machine code.  
+**Execution Context**   
+this is where all Javascript code runs. As defualt the Global Execution Context is the code that not inside any function.  
 In the code that exist inside of any function when ever called the function this will be new context Execution Contexts and being the active code that running, and this contineous every new called function on top of stack (see the image). 
 
 **Execution Context**  
@@ -133,7 +134,9 @@ more resources => [Youtube link](https://www.youtube.com/watch?v=OympYhd4P9w&lis
       }
       ```  
 
-      * **Creation of Scope Chain**
+      * **Creation of Scope Chain**   
+      *Every new function creates a scope:the enviroment in which the variables it defines are accessible*.   
+         ***Lexical scoping*** is a function that is Lexically within another function, and have access of the scope of the outer function.
       * **determine value of "this " variable**
    * **Execution Phase**:
       * this is where runned the function code line by line
