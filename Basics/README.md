@@ -11,7 +11,7 @@ var name = "Kayse"
 var number = 15
 `
 
-**Difference Primitive data types of JavaScripts are:**
+### Difference Primitive data types of JavaScripts are:
  * Number
  * String
  * Boolean
@@ -20,7 +20,7 @@ var number = 15
  * Null
     * meaning not exist
 
-**Comments**
+### Comments
 
 In Javascript it has two types of making comment in the code
 
@@ -37,13 +37,13 @@ another comment line
 */
 `
 
-**Operators**  
+### Operators
 `var year = 2021`    
 `console.log(year-26)` // output 1995    
 `typeof year` // _output_ Number
 
 
-**Functions**  
+### Functions
  if we have lot of codes that we should run couple of times we create function with parameters if necessary then called the function when ever is needed.
 
  ```
@@ -53,7 +53,7 @@ another comment line
  ```
 
 
-**Array**  
+### Array  
 it's like collection of Variables
 ```
 var names = ['Kayse', 'Jane']
@@ -61,7 +61,7 @@ var names = ['Kayse', 'Jane']
 console.log(names[0]) // Kayse
 ```  
 
-**Objects**  
+### Objects 
 like array instead of accessing the elemant by index, you can access by specific name. And also wont have order as Array.  
 ```
 var obj = {   
@@ -70,7 +70,7 @@ var obj = {
 console.log(obj['name']) // Kayse
 ```
 
-**Loops**  
+### Loops  
 Loops offer a quick and easy way to do something repeatedly(MDN). instead of writing couple of times same code, looping through is better.
   
 ```
