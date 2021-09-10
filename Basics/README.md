@@ -11,7 +11,7 @@
    - [How Javascript works](#how-javascript-works)
       - [Javascript versions](#javascript-versions)
       - [How it works](#how-it-works)
-      - [Javascript versions](#javascript-versions)
+
    - [Tricks and Tips](#tricks-and-tips)
 ## Data types
 [Codes Here](my_training_code.js) 💛    
