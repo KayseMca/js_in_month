@@ -11,6 +11,13 @@
    - [How Javascript works](#how-javascript-works)
       - [Javascript versions](#javascript-versions)
       - [How it works](#how-it-works)
+         - [Execution Context](#execution-context)
+            - [Creation Phase](#1-creation-phase )
+               - [Variable Object](#variable-object)
+               - [Creation of Scope Chain](#creation-of-scope-chain)
+               - [This keywoard](#this-keyword)
+            - [Execution Phase](#2-execution-phase)
+
 
    - [Tricks and Tips](#tricks-and-tips)
 ## Data types
@@ -106,7 +113,7 @@ let's check first javascript versions
 
 ### How it works?
 first, all the code in javascript is parsed a parser that reads js codes line by line, then the parser produces *Abstract Syntax Tree*: it translates js code into machine code.  
-#### Execution Context  
+### Execution Context  
 this is where all Javascript code runs. As defualt the Global Execution Context is the code that not inside any function.  
 In the code that exist inside of any function when ever called the function this will be new context Execution Contexts and being the active code that running, and this contineous every new called function on top of stack (see the image). 
 
@@ -121,13 +128,13 @@ more resources => [Youtube link](https://www.youtube.com/watch?v=OympYhd4P9w&lis
 Calling a new function, as already mentioned, create new Execution enviroment(new Execution Context) and the new Execution Context(function) is put on top of Execution Stack. This happens two phases:
    * Creation Phase
    * Execution Phase 
-##### 1. Creation Phase  
+#### 1. Creation Phase  
    this calles the function before the execution Phase and scans the function scope then compiles(simply prepares the function to get result)
 
--  ###### Variable Object   
+-  ##### Variable Object   
    Here is where goes all the variables, functions  and inner functions declaration information. All the variables are set undefined and in the execution phase it set its real values. And this is also where comes **Hoisting** => that means before declaration the functions and variables are available to use in Javascript
 
-   - ###### example Hoisting code
+   - ##### example Hoisting code
    ```
    greating();
    function greating(){
@@ -212,7 +219,7 @@ Calling a new function, as already mentioned, create new Execution enviroment(ne
 
    To understand more **this Keyword** let explain these steps:  
    * ###### Implicit Binding  
-      Here itw will points where it's called or who calles this. and we covered in the above code(inside the person Object).
+      Here it will points where it's called or who calles this. As examle we covered in the above code(inside the person Object).
       In implicit binding, you need to check what's to the left of the dot(.) operator adjacent to a function at invocation time. This determines what this is binding to. If we look back the above code   
       `person.greating()// output person{name:'John',age:26` in here the **this** keywoard will call the person object because of **the greating** function it called from person and belongs to it.
 
@@ -230,7 +237,8 @@ Calling a new function, as already mentioned, create new Execution enviroment(ne
 ```
 var a = 10  
  var b = "10"  
- if(a==b)
+ if(a==b) // true
+ if(a===b) // false
 
 ```  
 this comparison my not always good or efficiency  this will only good if you know the return of comparisons, so using __===__ maybe better.
