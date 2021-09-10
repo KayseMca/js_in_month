@@ -118,7 +118,7 @@ the Execution Context is like object and it has three properties:
 
 more resources => [Youtube link](https://www.youtube.com/watch?v=OympYhd4P9w&list=PL1BztTYDF-QNS9VdeIX62d1X5rxkLsejH&ab_channel=procademy)
 
-Calling a new function, as already mentioned, the new Execution Context(function) is put on top of Execution Stack. This happens two phases:
+Calling a new function, as already mentioned, create new Execution enviroment(new Execution Context) and the new Execution Context(function) is put on top of Execution Stack. This happens two phases:
    * Creation Phase
    * Execution Phase 
 ##### 1. Creation Phase  
