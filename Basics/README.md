@@ -32,7 +32,7 @@ var number = 15
  * Undefined
     * a declared variable but doesn't have a value yet
  * Null
-    * meaning not exist
+    * meaning not-existent reference assigned from programmer(have a value but not exist value)
 
 ### Comments
 
