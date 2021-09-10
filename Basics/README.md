@@ -1,4 +1,18 @@
-
+## Introduction
+## Table of Contents
+   - [Data types](#data-types)
+      - [Difference Primitive data types of Javascript](#difference-primitive-data-types-of-javascripts-are)
+      - [Comments](#comments)
+      - [Operators](#operators)
+      - [Functions](#functions)
+      - [Array](#array)
+      - [objects](#objects)
+      - [Loops](#loops)   
+   - [How Javascript works](#how-javascript-works)
+      - [Javascript versions](#javascript-versions)
+      - [How it works](#how-it-works)
+      - [Javascript versions](#javascript-versions)
+   - [Tricks and Tips](#tricks-and-tips)
 ## Data types
 [Codes Here](my_training_code.js) 💛    
 Javascript has dynamic typing. Data types are automatically assigned to variables.
@@ -79,30 +93,24 @@ for(var i=0; i<10;i++){
 }
 ```
 
-## Javascript Versions
-In 1996 changed from LiveScript to JavaScript. In 1997 ESI(ECMAScript 1) became the first JavaScript version, and then The following versions were released, respectively:
-* 2009 => ES5: Fully Supported all browsers
-* 2015 => ES6 or ES2015: No supported the old browsers but supported moderm browsers
 
-more notes=> this link
+
 
 ## How Javascript Works?
- Javascript, works inside browsers. And because of lots engine exists inside browsers like Google's v8 engine we use browsers Javascript runtime enviroment.
+let's check first javascript versions
+### Javascript Versions
+   In 1996 changed from LiveScript to JavaScript. In 1997 ESI(ECMAScript 1) became the first JavaScript version, and then The following versions were released, respectively:
+   * 2009 => ES5: Fully Supported all browsers
+   * 2015 => ES6 or ES2015: No supported the old browsers but supported moderm browsers
+   Javascript, works inside browsers. And because of lots engine exists inside browsers like Google's v8 engine we use browsers Javascript runtime enviroment.
 
- **Sources**  
-   English
- * [Article](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)  
-
-Turkish
- * [Article 1](https://oguzkilic.medium.com/taray%C4%B1c%C4%B1lar-javascripti-nas%C4%B1l-yorumlar-fbdfc472f8e3)  
- * [Article 2](https://devnot.com/2020/javascript-nasil-calisir/)
-
+### How it works?
 first, all the code in javascript is parsed a parser that reads js codes line by line, then the parser produces *Abstract Syntax Tree*: it translates js code into machine code.  
-**Execution Context**   
+#### Execution Context  
 this is where all Javascript code runs. As defualt the Global Execution Context is the code that not inside any function.  
 In the code that exist inside of any function when ever called the function this will be new context Execution Contexts and being the active code that running, and this contineous every new called function on top of stack (see the image). 
 
-**Execution Context**  
+
 the Execution Context is like object and it has three properties:
    * Variable Object
    * Scope Chain
@@ -110,96 +118,113 @@ the Execution Context is like object and it has three properties:
 
 more resources => [Youtube link](https://www.youtube.com/watch?v=OympYhd4P9w&list=PL1BztTYDF-QNS9VdeIX62d1X5rxkLsejH&ab_channel=procademy)
 
-   Calling a new function, as already mentioned, the new Execution Context(function) is put on top of Execution Stack. This happens two phases:
-   * **Creation Phase**: *The definition part*   
-   *this calles the function before the execution Phase and scans the function scope then compiles(simply prepares the function to get result)* 
-      *  **Variable Object**  
-      *Here is where goes all the variables, functions  and inner functions declaration information. All the variables are set undefined and in the execution phase it set its real values. And this is also where comes **Hoisting** => that means before declaration the functions and variables are available to use in Javascript*
+Calling a new function, as already mentioned, the new Execution Context(function) is put on top of Execution Stack. This happens two phases:
+   * Creation Phase
+   * Execution Phase 
+##### 1. Creation Phase  
+   this calles the function before the execution Phase and scans the function scope then compiles(simply prepares the function to get result)
 
-      **example Hoisting code**
+-  ###### Variable Object   
+   Here is where goes all the variables, functions  and inner functions declaration information. All the variables are set undefined and in the execution phase it set its real values. And this is also where comes **Hoisting** => that means before declaration the functions and variables are available to use in Javascript
+
+   - ###### example Hoisting code
+   ```
+   greating();
+   function greating(){
+      console.log("Hello there")
+   }
+   ```
+   **Note**: but the function Expression it will give an error as long as we storing the function in variable.   
+
+   ```
+   greating(); // this will cause an error because it counts "greating" as variable not as function, 
+               but calling without pranteses it return undefined because we mentioned in the Creation phrase all the variable it declares undefined as value.
+
+   var greating = function(){
+      console.log("Hello there")
+   }
+   ```  
+
+* ##### Creation of Scope Chain   
+   *Every new function creates a scope:the enviroment in which the variables it defines are accessible*.   
+      ***Lexical scoping*** is a function that is Lexically within another function, and have access of the scope of the outer function.
+
       ```
-      greating();
-      function greating(){
-         console.log("Hello there")
-      }
-      ```
-      **Note**: but the function Expression it will give an error as long as we storing the function in variable.   
+      // summarizing of what we learned already
 
-      ```
-      greating(); // this will cause an error because it counts "greating" as variable not as function, 
-                  but calling without pranteses it return undefined because we mentioned in the Creation phrase all the variable it declares undefined as value.
+      var x = "Javascript";
+      first(); // this is Hoisting, we calling function before we declare
 
-      var greating = function(){
-         console.log("Hello there")
-      }
-      ```  
+      function first() {
+         var y = "Concepts";
+         second();
 
-      * **Creation of Scope Chain**   
-      *Every new function creates a scope:the enviroment in which the variables it defines are accessible*.   
-         ***Lexical scoping*** is a function that is Lexically within another function, and have access of the scope of the outer function.
-
-         ```
-         // summarizing of what we learned already
-
-         var x = "Javascript";
-         first(); // this is Hoisting, we calling function before we declare
-
-         function first() {
-            var y = "Concepts";
-            second();
-
-            function second() { // this is Lexical scope, it is inside of another function
-               var z = "Learning";
-               console.log(x+y+z); // this Lexically scope can access the outer(first) function and the global one(x)
-            }
+         function second() { // this is Lexical scope, it is inside of another function
+            var z = "Learning";
+            console.log(x+y+z); // this Lexically scope can access the outer(first) function and the global one(x)
          }
-         ```
-      * **This Keyword**   
-      "This" Keyword is basically a special variable that is created  for every execution context.
-      The regular function call the "this" Keyword points at the global object( in strict mode it is *undefined*). The value of "this" Keyword is only assigned when the function is actually called(in runtime)
-      ```
-      function greating() {
-         console.log(this) // will call the global object(windows)
       }
-      // but ...
+      ```
+* ##### This Keyword  
+   "This" Keyword is basically a special variable that is created  for every execution context.
+   The regular function call the "this" Keyword points at the global object( in strict mode it is *undefined*). The value of "this" Keyword is only assigned when the function is actually called(in runtime)
+   ```
+   function greating() {
+      console.log(this) // will call the global object(windows)
+   }
+   // but ...
 
-      var person = {
-         name:"John",
-         age : 26
-         greating: function() {
-            console.log(this) // this will call the person object
+   var person = {
+      name:"John",
+      age : 26
+      greating: function() {
+         console.log(this) // this will call the person object
+      }
+
+      // easily, all the methods, the "this" Keyword points to the object that is calling the method(belong the method)
+   }
+   ```  
+   but in the Arrow function it uses the "this" Keyword of its parent scope.  
+   ```
+   var person = {
+      name:"John",
+      age : 26
+      greating: function() {
+         console.log(this) // this will call the person object
+
+         function inner() {
+            console.log(this) // will point the global object(window). But in Arrow function it is different
+
          }
+         inner();
 
-         // easily, all the methods, the "this" Keyword points to the object that is calling the method(belong the method)
-      }
-      ```  
-      but in the Arrow function it uses the "this" Keyword of its parent scope.  
-      ```
-      var person = {
-         name:"John",
-         age : 26
-         greating: function() {
-            console.log(this) // this will call the person object
-
-            function inner() {
-               console.log(this) // will point the global object(window). But in Arrow function it is different
-
-            }
-            inner();
-
-            let func = () {
-               console.log(this) // this will point the person object
-            }
-
-            func()
-
-            
+         let func = () {
+            console.log(this) // this will point the person object
          }
 
+         func()
+
+         
       }
-      ```
-   * **Execution Phase**:
-      * this is where runned the function code line by line
+
+   }
+   ```
+
+   To understand more **this Keyword** let explain these steps:  
+   * ###### Implicit Binding  
+      Here itw will points where it's called or who calles this. and we covered in the above code(inside the person Object).
+      In implicit binding, you need to check what's to the left of the dot(.) operator adjacent to a function at invocation time. This determines what this is binding to. If we look back the above code   
+      `person.greating()// output person{name:'John',age:26` in here the **this** keywoard will call the person object because of **the greating** function it called from person and belongs to it.
+
+   * ###### Explicit Binding(Call, Bind, Apply functions)
+
+   * ###### New Binding
+   * ###### Window Binding 
+
+##### 2. Execution Phase
+   this is where runned the function code line by line.  
+
+
  ## Tricks and Tips
 
 ```
