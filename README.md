@@ -1,5 +1,5 @@
 # js_in_month
-this's  my learning path of one month javascript (but contineously I update)  then will contineou DS and Algorithms
+this's  my learning path of javascript in one month (but contineously I update)  then will contineou DS and Algorithms
 
 ### Basics Javascript
 learning some basic concepts of javascript(Notes)
