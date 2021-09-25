@@ -1,4 +1,8 @@
 // Global APP controller
+
+// constructors(MVC) the model part
+
+
 var budgetController = (function() {
     var Expense = function(id, description, value) {
         this.id = id
@@ -78,6 +82,8 @@ var budgetController = (function() {
     }
 })();
 
+
+// UI controller (MVC) the view part
 var UIController = (function() {
 
     var domInput = {
@@ -152,6 +158,8 @@ var UIController = (function() {
     }
 })();
 
+
+// main controller(MVC) the Controller part
 var controller = (function(budgetControl, UIControl) {
 
     var DOM = UIControl.getDomString();
