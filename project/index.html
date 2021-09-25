@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculater App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9792e4c681.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <!-- 
+        header
+        1. background image
+        2.text with budget
+        3. label with input
+    -->
+    <header>
+        <div class="center">
+            <p class="header-p">Available Budget in September 2021:</p>
+            <h3 class="budget__value">+ 1400.05</h3>
+            <div class="budget-income">
+                INCOME
+                <p class="header__income">+ 1400.00</p>
+            </div>
+
+            <div class="budget-expenses">
+                EXPENSES
+                <p class="header__expenses">
+                    - 1400.00
+                </p>
+                <!-- <span class="percentage">0</span> -->
+
+            </div>
+
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="form">
+            <form>
+                <select class="type">
+                    <option value="inc">+</option>
+                    <option value="exp">-</option>
+                </select>
+                <input type="text" class="description" placeholder="description">
+                <input type="number" class="value" min="0" placeholder="value">
+                <button class="add__btn" type="button"><i class="far fa-check-circle fa-2x"></i></button>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- inline form  -->
+    <!-- <section>
+        <div class="list">
+            <div class="row">
+                <div class="col col-1">
+                    <h4>INCOME</h4>
+                    <ul>
+                        <li>testing</li>
+                    </ul>
+                </div>
+                <div class="col col-2">
+                    <h4>EXPENSES</h4>
+                    <ul>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section> -->
+    <!-- 
+        list of program
+        1.income list
+        2. expenses list
+     -->
+
+    </section>
+
+    <!-- inline form  -->
+    <section>
+        <div class="list">
+            <div class="row">
+                <div class="col col-1">
+                    <h4>INCOME</h4>
+                    <table class="income-table">
+                        <tr id="0">
+                            <!-- <td class="id">1</td> -->
+                            <!-- <td class="desc">Website</td>
+                            <td class="val">2500 </td> -->
+                            <!-- <span class="after"><i class="fas fa-trash"></i></span> -->
+                        </tr>
+                    </table>
+                </div>
+                <div class="col col-2">
+                    <h4>EXPENSES</h4>
+                    <table class="expense-table">
+                        <tr id="0">
+                            <!-- <td class="id">1</td> -->
+                            <!-- <td class="desc">Website</td>
+                            <td class="val">2500 </td> -->
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <script src="OOP.js"></script>
+</body>
+
+</html>

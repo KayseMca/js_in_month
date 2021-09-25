@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+header {
+    position: relative;
+    height: 300px;
+    background-image: url(back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 15px;
+}
+
+.center {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+.center>p {
+    font-family: monospace;
+    font-size: 1.3rem;
+}
+
+h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 2.2rem;
+}
+
+.budget-income {
+    background-color: rgb(70, 187, 119);
+    height: 20px;
+    width: 80%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.budget-expenses {
+    background-color: rgb(197, 56, 80);
+    height: 20px;
+    width: 80%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.header__expenses {
+    display: inline;
+    float: right;
+    margin-right: 3px;
+}
+
+.header__income {
+    display: inline;
+    float: right;
+    margin-right: 3px;
+}
+
+.section {
+    padding: 15px;
+    background-color: rgb(220, 217, 230);
+}
+
+form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.form input {
+    padding: 10px;
+    border: solid 1px rgb(222, 200, 231);
+    margin-right: 6px;
+    color: rgb(145, 71, 230);
+    font-size: 18px;
+}
+
+.form input[type="number"] {
+    flex: 2;
+    width: 10px;
+}
+
+.form input[type="text"] {
+    flex: 2;
+}
+
+.form select option {
+    flex: 1;
+    width: 10px;
+}
+
+.form i {
+    flex: 1;
+    color: rgb(126, 128, 240);
+}
+
+.list {
+    width: 70%;
+    margin: 4% auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-grow: 1; */
+}
+
+.col {
+    flex-grow: 1;
+}
+
+.col-1 {
+    padding: 15px;
+    /* background-color: red; */
+}
+
+.col-2 {
+    padding: 15px;
+    /* background-color: green; */
+    margin-right: auto;
+}
+
+.col ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+}
+
+.col ul li {
+    border-top: 1px solid rgb(20, 16, 16);
+}
+
+.col-1 h4 {
+    color: rgb(162, 236, 77)
+}
+
+.col-2 h4 {
+    color: rgb(192, 80, 90)
+}
+
+table,
+td {
+    margin-top: 20px;
+    width: 100%;
+    /* border-top: 0.5px solid rgb(56, 6, 6); */
+    border-collapse: collapse;
+}
+
+
+/* tr {
+    display: flex;
+    border-top: 0;
+} */
+
+td {
+    border-top: 1px solid #dddddd;
+    text-align: left;
+    flex: 1;
+    font-size: 20px;
+    padding: 8px;
+    /* height: 30px; */
+}
+
+table tr:nth-child(even) {
+    background-color: #664db1;
+}
+
+table tr:hover {
+    /* background-color: rgb(87, 77, 79);
+    color: rgb(246, 246, 248); */
+    /* content: "<td><span class="after"><i class="fas fa-trash"></i></span></td>"; */
+}
+
+table tr:hover:after {
+    background-color: rgb(87, 77, 79);
+    color: rgb(246, 246, 248);
+    /* content: " (" attr(span) ")"; */
+    content: "\03A7";
+    background-color: rgb(223, 151, 151);
+    padding: 4px 8px;
+}
